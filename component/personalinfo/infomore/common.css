@@ -1,0 +1,182 @@
+/* ---------------------------头部-------------------------- */
+._cover-top {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    height: 45px;
+    padding: 0 15px 0 10px;
+    line-height: 45px;
+    background: linear-gradient(180deg,#303036,#3c3b40);
+    opacity: 1;
+    color: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all .22s ease;
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+._cover-top .top-back {
+        max-width: 105px;
+        float: left;
+    }
+    ._cover-top .top-back .icon-return-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ._ellipsis, ._ellipsis-3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    ._ellipsis {
+        white-space: nowrap;
+    }
+    .iconfont {
+        font-family: iconfont!important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: .2px;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    ._cover-top .top-back .iconfont:before {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    .icon-return-arrow:before {
+        content: "\E60A";
+    }
+    :after, :before {
+        box-sizing: inherit;
+    }
+    ._cover-top .top-other {
+        height: 100%;
+        max-width: 75px;
+        min-width: 50px;
+        width: auto;
+        float: right;
+    }
+    ._align-right {
+        text-align: right;
+    }
+    ._cover-top .top-other .iconfont {
+        font-size: 24px;
+    }
+    ._cover-top .top-title {
+        padding: 0 8px;
+        overflow: hidden;
+        font-size: 18px;
+        justify-content: center;
+        text-align: center;
+    }
+    ._cover-top .top-title {
+        transition: all .2s ease;
+    }
+    ._effect {
+        opacity: 1;
+        transition: all .3s ease;
+    }
+    ._cover-top .top-title>p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ._cover-top .top-title {
+        padding: 0 8px;
+        overflow: hidden;
+        font-size: 18px;
+        justify-content: center;
+        text-align: center;
+    }
+    * {
+        box-sizing: border-box;
+    }
+/* 主体 */
+.app-content {
+    padding-top: 45px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+.app-content[data-v-6e1130aa] {
+    padding-top: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.component-me[data-v-6e1130aa] {
+    padding-top: 1px;
+    background-color: #efeff4;
+}
+.app-content ._full_inner {
+    z-index: 2;
+}
+._effect {
+    opacity: 1;
+    transition: all .3s ease;
+}
+._full_inner {
+    position: relative;
+    height: 100%;
+    z-index: 5;
+}
+.weui_cells {
+    margin-top: 1.17647059em;
+    background-color: #fff;
+    line-height: 1.41176471;
+    font-size: 17px;
+    overflow: hidden;
+    position: relative;
+}
+.weui_cells_access .weui_cell:not(.no_access) {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.weui_cells_access a.weui_cell {
+    color: inherit;
+}
+.weui_cell {
+    padding: 10px 15px;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+.me-line .weui_cell_primary[data-v-6e1130aa] {
+    font-size: 14px;
+    color: #111111;
+}
+.weui_cell_primary {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+.me-line .weui_cell_primary p[data-v-6e1130aa]:first-child {
+    font-size: 18px;
+}
+.me-line .weui_cell_primary p:first-child {
+    font-size: 18px;
+}
+.weui_cell_ft {
+    text-align: right;
+    color: #888;
+}
+._align-middle {
+    vertical-align: middle;
+}
+a img {
+    border: 0;
+}
+.icon-zuojiantou{margin-right: 15px;}
+.weui_cells>a{border-bottom: 1px solid #ccc;}
+.imgleft{margin-left: 10px}
+/* margin-left: 10px; */
+/* .weui_cells>a:last-child{border-bottom:none} */
