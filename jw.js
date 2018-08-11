@@ -110,6 +110,58 @@ app.post("/addfriend",function(req,res){
             res.send("success");
     })
 })
+
+//直接添加朋友
+app.get("/directAddFri",function (req,res) {
+
+    var {friId,userId}=req.query;
+
+    new Promise(function (resolve,reject) {
+
+        connection.query(`select * from friends where userId=${userId} and friId=${friId}`,function (err,result){
+
+            if(err){
+                res.end("err");
+            }else {
+                if(result.length==0){
+                    resolve();
+                }else if(result.length==1){
+                    res.end("ok");
+                }else {
+                    res.end("err");
+                }
+            }
+
+        });
+
+    }).then(function () {
+
+        var arr=[];
+
+        var time = new Date().getTime();
+        arr[0] = [friId,userId,time,2];
+        arr[1] = [userId,friId,time,2];
+        console.log(arr);
+
+        connection.query("insert into friends (friId,userId,addtime,accstatus) values ?",[arr],function (err,result) {
+            if(err){
+                console.log(err);
+                res.end("err");
+            } else {
+                if(result.affectedRows==2){
+                    res.end("ok");
+                }else {
+                    res.end("err");
+                }
+            }
+
+        });
+
+    })
+
+
+
+})
 //查询是否已发送申请
 app.post("/checkfriend",function(req,res){
 	res.append("Access-Control-Allow-Origin","*");
