@@ -1,9 +1,6 @@
 <template>
       <header >
           <p v-html="html"></p>
-           <!--<img :src="img[1]" alt="">-->
-          <!--<img :src="img[0]" alt="" @click="tosearch">-->
-         
       </header>
 </template>
 <script>
@@ -12,7 +9,7 @@ import img2 from "../../img/add.jpg";
 export default {
   data() {
     return {
-      html: "晋彤",
+      html: "聊天列表",
       img:[img1,img2]
     };
   },

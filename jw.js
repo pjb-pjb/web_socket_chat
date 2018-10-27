@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var mysql = require("mysql");
+var mysql1 = require("mysql");
 var url = require("url");
 var multer = require ("multer");
 var querystring  = require("querystring");
@@ -8,13 +8,30 @@ var server = require("http").createServer(app);
 var io = require("socket.io")(server);
 //实例化express
 app.use(express.static('userlogo'));
-var connection = mysql.createConnection({
-		host:"localhost",
-		user:"root",
-		password:"",
-		database:"fecshop"
-	});
-connection.connect();
+var mysql_config = {
+    host:"localhost",
+    user:"root",
+    password:"",
+    database:"fecshop"
+};
+var connection = "";
+function handleDisconnection() {
+    connection = mysql1.createConnection(mysql_config);
+    connection.connect(function (err) {
+        if (err) {
+            setTimeout('handleDisconnection()', 2000);
+        }
+    });
+
+    connection.on('error', function (err) {
+        if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+            handleDisconnection();
+        } else {
+            console.log(err);
+        }
+    });
+}
+handleDisconnection();
 //--------------------------------wang----------------------------------------
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
